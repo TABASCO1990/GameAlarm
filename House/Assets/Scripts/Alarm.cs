@@ -8,6 +8,7 @@ public class Alarm : MonoBehaviour
     private float _targetVolumeAlarm;
     private float _minVolumeAlarm = 0f;
     private float _maxVolumeAlarm = 1.0f;
+    private float _durationAlarm = 0.5f;
 
     private void Awake()
     {
@@ -35,7 +36,7 @@ public class Alarm : MonoBehaviour
     {
         while (_alarm.volume != _targetVolumeAlarm)
         {
-            _alarm.volume = Mathf.MoveTowards(_alarm.volume, _targetVolumeAlarm, 0.5f * Time.deltaTime);
+            _alarm.volume = Mathf.MoveTowards(_alarm.volume, _targetVolumeAlarm, _durationAlarm * Time.deltaTime);
 
             if (_alarm.volume == _minVolumeAlarm)
             {
