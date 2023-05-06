@@ -2540,7 +2540,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 469532721}
         m_TargetAssemblyTypeName: Alarm, Assembly-CSharp
-        m_MethodName: PlayAlarm
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2555,7 +2555,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 469532721}
         m_TargetAssemblyTypeName: Alarm, Assembly-CSharp
-        m_MethodName: StopAlarm
+        m_MethodName: Stop
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

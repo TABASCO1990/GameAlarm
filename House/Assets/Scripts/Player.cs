@@ -7,9 +7,9 @@ public class Player : MonoBehaviour
 
     [SerializeField] private float _speed;
 
-    private Vector2 moveDirection;
+    private Vector2 _moveDirection;
 
-    void Update()
+    private void Update()
     {
         Move();
     }
@@ -18,8 +18,8 @@ public class Player : MonoBehaviour
     {
         float moveX = Input.GetAxisRaw(MoveX);
         float moveY = Input.GetAxisRaw(MoveY);
-        moveDirection = new Vector2(moveX, moveY).normalized;
+        _moveDirection = new Vector2(moveX, moveY).normalized;
 
-        transform.Translate(moveDirection * _speed * Time.deltaTime);
+        transform.Translate(_moveDirection * _speed * Time.deltaTime);
     }
 }

@@ -15,14 +15,14 @@ public class Alarm : MonoBehaviour
         _alarm.volume = _minVolumeAlarm;
     }
 
-    public void PlayAlarm()
+    public void Play()
     {
         _targetVolumeAlarm = _maxVolumeAlarm;
         _alarm.Play();
         StartCoroutine(VolumeSound());
     }
 
-    public void StopAlarm()
+    public void Stop()
     {
         _targetVolumeAlarm = _minVolumeAlarm;
 
